@@ -1,16 +1,20 @@
-def main():
-    mybirthyear = int(input("mybirthyear = "))
-    isleapyear = mybirthyear/4
-    for isleapyear in s:
-        if (isleapyear(mybirthyear)):
-            print("Year {0} was a leap year".format(mybirthyear))
-        else:
-            print("Year {0} was not a leap year".format(mybirthyear))
+def isleapyear(n):
+    if (n%400 == 0):
+        print("Year {0} was a leap year".format(n))
+        return True
+    if (n%100 == 0):
+        print("Year {0} was not a leap year".format(n))
+        return False
+    if (n%4 == 0):
+        print("Year {0} was a leap year".format(n))
+        return True
+    else:
+        print("Year {0} was not a leap year".format(n))
+    return False
 
-def prepare_int_for_leap_year_checking(s):
-    pass
+n = input("mybirthyear = ")
 
-def is_leap_year(s):
-    pass
-
-main()
+if (isleapyear(n)):
+    print("Year {0} was a leap year".format(n))
+else:
+    print("Year {0} was not a leap year".format(n)
